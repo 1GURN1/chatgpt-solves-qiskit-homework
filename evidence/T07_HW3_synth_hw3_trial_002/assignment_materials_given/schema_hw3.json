@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HW3 Seeded Deutsch-Jozsa answers.json schema",
+  "type": "object",
+  "required": [
+    "assignment_id",
+    "student_id",
+    "seed",
+    "num_input_qubits",
+    "shots",
+    "mask_q0_to_qn",
+    "output_offset",
+    "measurement_mode",
+    "measurement_map",
+    "predicted_oracle_classification",
+    "expected_logical_qn_to_q0",
+    "expected_display_bitstring",
+    "simulator_counts",
+    "dominant_bitstring",
+    "reflection_oracle_classification",
+    "reflection_bit_order",
+    "reflection_hardware_noise"
+  ],
+  "properties": {
+    "assignment_id": {
+      "const": "HW3"
+    },
+    "student_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "seed": {
+      "type": "integer"
+    },
+    "num_input_qubits": {
+      "type": "integer",
+      "minimum": 3,
+      "maximum": 5
+    },
+    "shots": {
+      "type": "integer",
+      "minimum": 128
+    },
+    "mask_q0_to_qn": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "enum": [
+          0,
+          1
+        ]
+      },
+      "minItems": 3,
+      "maxItems": 5
+    },
+    "output_offset": {
+      "type": "integer",
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "measurement_mode": {
+      "type": "string",
+      "enum": [
+        "direct",
+        "reversed"
+      ]
+    },
+    "measurement_map": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "integer"
+        },
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "predicted_oracle_classification": {
+      "type": "string",
+      "enum": [
+        "constant",
+        "balanced"
+      ]
+    },
+    "expected_logical_qn_to_q0": {
+      "type": "string",
+      "pattern": "^[01]+$"
+    },
+    "expected_display_bitstring": {
+      "type": "string",
+      "pattern": "^[01]+$"
+    },
+    "simulator_counts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer"
+      }
+    },
+    "dominant_bitstring": {
+      "type": "string",
+      "pattern": "^[01]+$"
+    },
+    "original_depth": {
+      "type": "integer"
+    },
+    "transpiled_depth_simulator": {
+      "type": "integer"
+    },
+    "operation_counts_simulator": {
+      "type": "object"
+    },
+    "hardware_run_completed": {
+      "type": "boolean"
+    },
+    "hardware_backend": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hardware_job_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hardware_counts": {
+      "type": "object"
+    },
+    "hardware_dominant_bitstring": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hardware_expected_percentage": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "hardware_result_classification": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reflection_oracle_classification": {
+      "type": "string"
+    },
+    "reflection_bit_order": {
+      "type": "string"
+    },
+    "reflection_hardware_noise": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HW2 QFT Hardware Assignment Answers Schema",
+  "type": "object",
+  "required": [
+    "assignment_id",
+    "student_id",
+    "seed",
+    "num_qubits",
+    "input_bits_q0_to_qn",
+    "measurement_mode",
+    "measurement_map",
+    "expected_logical_qn_to_q0",
+    "expected_display_bitstring",
+    "shots",
+    "counts",
+    "dominant_bitstring",
+    "original_depth",
+    "transpiled_depth_simulator",
+    "operation_counts_simulator",
+    "reflection_qft_recovery",
+    "reflection_bit_order",
+    "reflection_hardware_noise"
+  ],
+  "properties": {
+    "assignment_id": {
+      "type": "string"
+    },
+    "student_id": {
+      "type": "string"
+    },
+    "seed": {
+      "type": "integer"
+    },
+    "num_qubits": {
+      "type": "integer",
+      "minimum": 3
+    },
+    "input_bits_q0_to_qn": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "enum": [
+          0,
+          1
+        ]
+      }
+    },
+    "measurement_mode": {
+      "type": "string"
+    },
+    "measurement_map": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "integer"
+        }
+      }
+    },
+    "expected_logical_qn_to_q0": {
+      "type": "string"
+    },
+    "expected_display_bitstring": {
+      "type": "string"
+    },
+    "shots": {
+      "type": "integer"
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer"
+      }
+    },
+    "dominant_bitstring": {
+      "type": "string"
+    },
+    "original_depth": {
+      "type": "integer"
+    },
+    "transpiled_depth_simulator": {
+      "type": "integer"
+    },
+    "operation_counts_simulator": {
+      "type": "object"
+    },
+    "hardware_attempted": {
+      "type": "boolean"
+    },
+    "hardware_backend": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hardware_job_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hardware_counts": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "hardware_dominant_bitstring": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hardware_expected_percentage": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "hardware_original_depth": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "hardware_transpiled_depth": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "hardware_operation_counts": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "reflection_qft_recovery": {
+      "type": "string"
+    },
+    "reflection_bit_order": {
+      "type": "string"
+    },
+    "reflection_hardware_noise": {
+      "type": "string"
+    }
+  }
+}

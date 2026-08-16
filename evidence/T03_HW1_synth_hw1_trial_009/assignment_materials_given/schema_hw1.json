@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HW1 Seeded Measurement answers.json schema",
+  "type": "object",
+  "required": [
+    "assignment_id",
+    "student_id",
+    "seed",
+    "num_qubits",
+    "shots",
+    "measurement_mode",
+    "measurement_map",
+    "initial_bits_q0_to_qn",
+    "flip_mask_q0_to_qn",
+    "final_bits_q0_to_qn",
+    "expected_logical_qn_to_q0",
+    "expected_display_bitstring",
+    "counts",
+    "dominant_bitstring",
+    "reflection_bit_order",
+    "reflection_bit_flip"
+  ],
+  "properties": {
+    "assignment_id": {
+      "const": "HW1"
+    },
+    "student_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "seed": {
+      "type": "integer"
+    },
+    "num_qubits": {
+      "type": "integer",
+      "minimum": 4,
+      "maximum": 5
+    },
+    "shots": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "measurement_mode": {
+      "enum": [
+        "direct",
+        "reversed"
+      ]
+    },
+    "measurement_map": {
+      "type": "array"
+    },
+    "initial_bits_q0_to_qn": {
+      "type": "array",
+      "items": {
+        "enum": [
+          0,
+          1
+        ]
+      }
+    },
+    "flip_mask_q0_to_qn": {
+      "type": "array",
+      "items": {
+        "enum": [
+          0,
+          1
+        ]
+      }
+    },
+    "final_bits_q0_to_qn": {
+      "type": "array",
+      "items": {
+        "enum": [
+          0,
+          1
+        ]
+      }
+    },
+    "expected_logical_qn_to_q0": {
+      "type": "string"
+    },
+    "expected_display_bitstring": {
+      "type": "string"
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "dominant_bitstring": {
+      "type": "string"
+    },
+    "reflection_bit_order": {
+      "type": "string",
+      "minLength": 40
+    },
+    "reflection_bit_flip": {
+      "type": "string",
+      "minLength": 25
+    }
+  },
+  "additionalProperties": true
+}
