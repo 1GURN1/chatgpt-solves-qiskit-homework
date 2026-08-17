@@ -1,1 +1,3 @@
-TO_FILL: paste complete hidden grader output here.
+C:\Users\gtiwa\ai-resilient-qiskit-assignments>python assignments_frozen/hw1_seeded_measurement/grader_hw1_demo.py evidence/T03_HW1_synth_hw1_trial_009/generated_versions/answers.json synth_hw1_trial_009
+PASSED
+- All checks passed.

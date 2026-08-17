@@ -1,1 +1,47 @@
-TO_FILL: paste complete hidden grader output here.
+C:\Users\gtiwa\ai-resilient-qiskit-assignments>python assignments_frozen/hw2_qft_hardware/grader_hw2_demo.py evidence/T06_HW2_synth_hw2_trial_004/generated_versions/answers.json synth_hw2_trial_004
+{
+  "score": 10,
+  "max_score": 10,
+  "feedback": [
+    "PASS: seed",
+    "PASS: num_qubits",
+    "PASS: input_bits_q0_to_qn",
+    "PASS: measurement_map",
+    "PASS: expected_display_bitstring",
+    "PASS: dominant_bitstring",
+    "PASS: simulator counts place all shots on expected bitstring"
+  ],
+  "reference": {
+    "assignment_id": "HW2",
+    "student_id": "synth_hw2_trial_004",
+    "seed": 187642109893800,
+    "num_qubits": 3,
+    "input_bits_q0_to_qn": [
+      0,
+      0,
+      1
+    ],
+    "measurement_mode": "reversed",
+    "measurement_map": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "expected_logical_qn_to_q0": "100",
+    "expected_display_bitstring": "001",
+    "shots": 2048,
+    "counts": {
+      "001": 2048
+    },
+    "dominant_bitstring": "001"
+  }
+}

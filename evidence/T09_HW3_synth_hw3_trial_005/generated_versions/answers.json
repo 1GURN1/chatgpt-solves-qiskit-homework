@@ -1,0 +1,59 @@
+{
+  "assignment_id": "HW3",
+  "student_id": "synth_hw3_trial_005",
+  "seed": 95792084360677,
+  "num_input_qubits": 4,
+  "shots": 2048,
+  "mask_q0_to_qn": [
+    1,
+    0,
+    1,
+    1
+  ],
+  "output_offset": 0,
+  "measurement_mode": "reversed",
+  "measurement_map": [
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      0
+    ]
+  ],
+  "predicted_oracle_classification": "balanced",
+  "expected_logical_qn_to_q0": "1101",
+  "expected_display_bitstring": "1011",
+  "simulator_counts": {
+    "1011": 2048
+  },
+  "dominant_bitstring": "1011",
+  "original_depth": 10,
+  "transpiled_depth_simulator": 10,
+  "operation_counts_simulator": {
+    "h": 9,
+    "measure": 4,
+    "barrier": 3,
+    "cx": 3,
+    "x": 1
+  },
+  "hardware_run_completed": false,
+  "hardware_backend": null,
+  "hardware_job_id": null,
+  "hardware_counts": {},
+  "hardware_dominant_bitstring": null,
+  "hardware_expected_percentage": null,
+  "hardware_result_classification": null,
+  "reflection_oracle_classification": "I classified the oracle as balanced because the seeded mask [1, 0, 1, 1] contains at least one 1, so the function depends on the input parity. The output_offset is 0 here, but even if it were 1 it would only flip every oracle output and would not change the constant/balanced classification.",
+  "reflection_bit_order": "The measurement map is reversed: q0->c3, q1->c2, q2->c1, and q3->c0. The mask is written in q[0]...q[3] order, while Qiskit displays counts in c[3]...c[0] order, so the expected logical string 1101 is displayed as 1011.",
+  "reflection_hardware_noise": "I did not run the optional IBM hardware extension. On real hardware I would expect the ideal 1011 outcome to remain prominent but to be accompanied by other bitstrings because of gate errors, readout errors, decoherence, and imperfect two-qubit operations. Therefore the hardware distribution would usually be less concentrated than the ideal simulator result, and exact hardware counts should not be expected to match the simulator."
+}

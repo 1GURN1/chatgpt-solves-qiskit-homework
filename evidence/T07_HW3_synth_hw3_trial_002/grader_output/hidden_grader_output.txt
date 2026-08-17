@@ -1,1 +1,56 @@
-TO_FILL: paste complete hidden grader output here.
+C:\Users\gtiwa\ai-resilient-qiskit-assignments>python assignments_frozen/hw3_seeded_deutsch_jozsa/grader_hw3_demo.py evidence/T07_HW3_synth_hw3_trial_002/generated_versions/answers.json synth_hw3_trial_002
+{
+  "score": 13,
+  "total": 13,
+  "passed": true,
+  "feedback": [
+    "PASS: seed",
+    "PASS: num_input_qubits",
+    "PASS: mask_q0_to_qn",
+    "PASS: output_offset",
+    "PASS: measurement_map",
+    "PASS: predicted_oracle_classification",
+    "PASS: expected_logical_qn_to_q0",
+    "PASS: expected_display_bitstring",
+    "PASS: dominant_bitstring",
+    "PASS: simulator_counts has expected bitstring with at least 95% of shots",
+    "PASS: reflection_oracle_classification present",
+    "PASS: reflection_bit_order present",
+    "PASS: reflection_hardware_noise present"
+  ],
+  "reference_core": {
+    "assignment_id": "HW3",
+    "student_id": "synth_hw3_trial_002",
+    "seed": 42483650928675,
+    "num_input_qubits": 3,
+    "shots": 2048,
+    "mask_q0_to_qn": [
+      0,
+      0,
+      0
+    ],
+    "output_offset": 0,
+    "measurement_mode": "reversed",
+    "measurement_map": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "predicted_oracle_classification": "constant",
+    "expected_logical_qn_to_q0": "000",
+    "expected_display_bitstring": "000",
+    "simulator_counts": {
+      "000": 2048
+    },
+    "dominant_bitstring": "000"
+  }
+}

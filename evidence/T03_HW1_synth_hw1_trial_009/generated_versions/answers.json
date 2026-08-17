@@ -1,0 +1,59 @@
+{
+  "assignment_id": "HW1",
+  "student_id": "synth_hw1_trial_009",
+  "seed": 5007448123283285471,
+  "num_qubits": 5,
+  "shots": 2048,
+  "measurement_mode": "reversed",
+  "measurement_map": [
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      4,
+      0
+    ]
+  ],
+  "initial_bits_q0_to_qn": [
+    0,
+    1,
+    1,
+    0,
+    1
+  ],
+  "flip_mask_q0_to_qn": [
+    1,
+    0,
+    0,
+    0,
+    1
+  ],
+  "final_bits_q0_to_qn": [
+    1,
+    1,
+    1,
+    0,
+    0
+  ],
+  "expected_logical_qn_to_q0": "00111",
+  "expected_display_bitstring": "11100",
+  "counts": {
+    "11100": 2048
+  },
+  "dominant_bitstring": "11100",
+  "reflection_bit_order": "The measurement map is reversed: q[0] -> c[4], q[1] -> c[3], q[2] -> c[2], q[3] -> c[1], and q[4] -> c[0]. After the flips, the qubits in q[0]...q[4] order are [1, 1, 1, 0, 0], so the classical bits in c[0]...c[4] order are [0, 0, 1, 1, 1]. Qiskit displays count keys in c[4]...c[0] order, which gives the displayed bitstring 11100.",
+  "reflection_bit_flip": "The initial bits in q[0]...q[4] order are [0, 1, 1, 0, 1]. The seeded flip mask [1, 0, 0, 0, 1] applies X gates to q[0] and q[4]. Therefore q[0] changes from 0 to 1 and q[4] changes from 1 to 0, while q[1], q[2], and q[3] stay unchanged. XORing the initial bits with the mask gives the final bits [1, 1, 1, 0, 0]."
+}

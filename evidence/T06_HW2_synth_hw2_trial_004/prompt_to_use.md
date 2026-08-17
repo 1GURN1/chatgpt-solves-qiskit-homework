@@ -10,7 +10,13 @@ Trial notes: non-palindromic input; reversed measurement map
 Prompt text to send:
 
 ```
-I need to complete this assignment using the attached student-visible files only. Use the synthetic student ID `synth_hw2_trial_004`. Please provide all required completed code/notebook cells and any required output files such as answers.json. Do not assume access to instructor solutions or hidden reference functions.
+I am completing HW2: QFT / Inverse QFT Hardware Recovery.
+
+I uploaded the assignment materials. Please complete the assignment using this student ID:
+
+synth_hw2_trial_004
+
+Follow the assignment instructions exactly. Fill in any missing code cells and provide the required final answers.json content. Please include all required code and any required output files described in the assignment.
 ```
 
 Follow-up rules: at most two follow-ups. A follow-up may only paste an exact runtime error or ask for a required file that was omitted. Do not provide conceptual hints or independent fixes.

@@ -1,0 +1,60 @@
+{
+  "assignment_id": "HW2",
+  "student_id": "synth_hw2_trial_001",
+  "seed": 132636380804824,
+  "num_qubits": 4,
+  "input_bits_q0_to_qn": [
+    0,
+    1,
+    1,
+    1
+  ],
+  "measurement_mode": "reversed",
+  "measurement_map": [
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      0
+    ]
+  ],
+  "expected_logical_qn_to_q0": "1110",
+  "expected_display_bitstring": "0111",
+  "shots": 2048,
+  "counts": {
+    "0111": 2048
+  },
+  "dominant_bitstring": "0111",
+  "original_depth": 18,
+  "transpiled_depth_simulator": 18,
+  "operation_counts_simulator": {
+    "cp": 12,
+    "h": 8,
+    "measure": 4,
+    "swap": 4,
+    "x": 3,
+    "barrier": 3
+  },
+  "hardware_attempted": false,
+  "hardware_backend": null,
+  "hardware_job_id": null,
+  "hardware_counts": null,
+  "hardware_dominant_bitstring": null,
+  "hardware_expected_percentage": null,
+  "hardware_original_depth": null,
+  "hardware_transpiled_depth": null,
+  "hardware_operation_counts": null,
+  "reflection_qft_recovery": "QFT followed by inverse QFT recovers the original computational basis state because the inverse QFT exactly undoes the phase rotations, Hadamard gates, and swaps of the QFT. For my seeded circuit, the recovered logical qubit string is 1110, and the ideal simulator output is concentrated on the corresponding displayed bitstring 0111.",
+  "reflection_bit_order": "My input bits are listed as q[0]...q[3] = 0,1,1,1, so the logical q[3]...q[0] string is 1110. My measurement map is reversed: q0->c3, q1->c2, q2->c1, q3->c0. Therefore c[3]...c[0] is 0,1,1,1, so Qiskit displays the count key 0111.",
+  "reflection_hardware_noise": "I did not attempt the optional IBM hardware run. On real hardware I would expect additional bitstrings because controlled-phase gates and swaps must be implemented through noisy native gates, and readout error can also change the measured result. A successful hardware run should still make the expected bitstring clearly dominant, ideally above the assignment guide's 70% threshold."
+}

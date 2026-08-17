@@ -1,0 +1,55 @@
+{
+  "assignment_id": "HW2",
+  "student_id": "synth_hw2_trial_004",
+  "seed": 187642109893800,
+  "num_qubits": 3,
+  "input_bits_q0_to_qn": [
+    0,
+    0,
+    1
+  ],
+  "measurement_mode": "reversed",
+  "measurement_map": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "expected_logical_qn_to_q0": "100",
+  "expected_display_bitstring": "001",
+  "shots": 2048,
+  "counts": {
+    "001": 2048
+  },
+  "dominant_bitstring": "001",
+  "original_depth": 17,
+  "transpiled_depth_simulator": 17,
+  "operation_counts_simulator": {
+    "h": 6,
+    "cp": 6,
+    "barrier": 3,
+    "measure": 3,
+    "swap": 2,
+    "x": 1
+  },
+  "hardware_attempted": false,
+  "hardware_backend": null,
+  "hardware_job_id": null,
+  "hardware_counts": null,
+  "hardware_dominant_bitstring": null,
+  "hardware_expected_percentage": null,
+  "hardware_original_depth": null,
+  "hardware_transpiled_depth": null,
+  "hardware_operation_counts": null,
+  "reflection_qft_recovery": "QFT changes the computational-basis state into a phase-encoded superposition, and the inverse QFT reverses those phase rotations and Hadamards. Therefore QFT followed by inverse QFT recovers the original basis state; for this seeded simulator run the recovered displayed bitstring is 001.",
+  "reflection_bit_order": "My input bits are q[0..2] = [0, 0, 1], so the logical q[2]q[1]q[0] string is 100. Because my measurement map is reversed (q0->c2, q1->c1, q2->c0), the classical bits are c[0..2] = [1, 0, 0], and Qiskit displays c[2]c[1]c[0] = 001.",
+  "reflection_hardware_noise": "I did not attempt the optional IBM hardware run. On real hardware, gate errors, readout errors, routing overhead, and decoherence could move shots away from the expected bitstring, so the result would not necessarily be the exact single-output distribution seen on the ideal simulator."
+}

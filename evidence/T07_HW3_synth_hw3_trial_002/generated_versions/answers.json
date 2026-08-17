@@ -1,0 +1,53 @@
+{
+  "assignment_id": "HW3",
+  "student_id": "synth_hw3_trial_002",
+  "seed": 42483650928675,
+  "num_input_qubits": 3,
+  "shots": 2048,
+  "mask_q0_to_qn": [
+    0,
+    0,
+    0
+  ],
+  "output_offset": 0,
+  "measurement_mode": "reversed",
+  "measurement_map": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "predicted_oracle_classification": "constant",
+  "expected_logical_qn_to_q0": "000",
+  "expected_display_bitstring": "000",
+  "simulator_counts": {
+    "000": 2048
+  },
+  "dominant_bitstring": "000",
+  "original_depth": 7,
+  "transpiled_depth_simulator": 7,
+  "operation_counts_simulator": {
+    "h": 7,
+    "barrier": 3,
+    "measure": 3,
+    "x": 1
+  },
+  "hardware_run_completed": false,
+  "hardware_backend": null,
+  "hardware_job_id": null,
+  "hardware_counts": {},
+  "hardware_dominant_bitstring": null,
+  "hardware_expected_percentage": null,
+  "hardware_result_classification": null,
+  "reflection_oracle_classification": "I classified the oracle by inspecting mask_q0_to_qn before constructing the circuit. Because every mask bit is 0, f(x) does not depend on the input, so the oracle is constant. The output_offset is 0 here; even if it were 1, it would only flip the constant output value and would not change the constant/balanced classification.",
+  "reflection_bit_order": "The measurement map is reversed: q[0] is measured into c[2], q[1] into c[1], and q[2] into c[0]. Qiskit displays counts in c[n-1]...c[0] order, while the mask is written in q[0]...q[n-1] order, so a non-symmetric bit pattern can appear reversed. For this constant oracle the logical result is 000, so the reversal still displays 000.",
+  "reflection_hardware_noise": "I did not run the optional IBM hardware section. On real hardware I would expect some shots to move away from the ideal 000 result because of gate errors, decoherence, and measurement/readout errors. The expected bitstring should still tend to be prominent on a sufficiently good backend, but unlike the ideal simulator the counts would usually be spread across multiple bitstrings."
+}
