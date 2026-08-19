@@ -1,0 +1,9 @@
+qiskit==2.3.0
+qiskit-aer==0.17.2
+qiskit-ibm-runtime==0.45.0
+matplotlib==3.10.3
+pylatexenc==2.10
+jsonschema==4.26.0
+nbformat==5.10.4
+nbconvert==7.16.6
+pandas==2.3.1
